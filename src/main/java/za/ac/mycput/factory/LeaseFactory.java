@@ -6,6 +6,12 @@
  */
 
 package za.ac.mycput.factory;
+/*
+* Lease.java
+* Lease for the tenant
+* Malik Muhammed (230388175)
+* 21/3/2026
+ */
 
 import za.ac.mycput.domain.Lease;
 
