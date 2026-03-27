@@ -68,7 +68,7 @@ classDiagram
     }
 
     %% Relationships and Multiplicity
-    Agent "1" -- "1..*" Property : manages
+    Manager "1" -- "1..*" Property : manages
     Property "1" -- "0..*" MaintenanceRequest : has
     Property "1" -- "1..*" Lease : is associated with
     Tenant "1" -- "1..*" Lease : signs
