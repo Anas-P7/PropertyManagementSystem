@@ -3,7 +3,7 @@ classDiagram
     direction TB
 
     %% Domain Entities
-    class Agent {
+    class Manager {
         -agentId: String
         -name: String
         -licenseNo: String
