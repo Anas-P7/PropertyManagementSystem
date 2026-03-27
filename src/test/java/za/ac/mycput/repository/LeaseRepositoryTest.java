@@ -1,9 +1,3 @@
-/*
- * LeaseRepositoryTest.java
- * Domain entity representing a rental property.
- * Author : Malik Muhammed (230388175)
- * Date   : 20 March 2026
- */
 package za.ac.mycput.repository;
 
 /*
@@ -39,9 +33,9 @@ class LeaseRepositoryTest {
         // FIXED: Passing 3 Strings and 1 double exactly as the Factory demands.
         // You can change "String1", "String2", etc., to make sense for your project (e.g. "TenantID", "StartDate", "EndDate")
         lease1 = LeaseFactory.createLease(
-                "String1",
-                "String2",
-                "String3",
+                "L001",
+                "P001",
+                "John Doe",
                 8500.00
         );
     }
@@ -65,11 +59,11 @@ class LeaseRepositoryTest {
     @Test
     @Order(3)
     void testUpdate() {
-        // This will still be red until you add a 'Setter' to your Lease.java class!
-        lease1.setMonthlyRent(9500.00);
-        Lease updated = repository.update(lease1);
+        Lease updatedLease = new Lease.Builder().copy(lease1).setMonthlyRent(9500.00).build();
+        Lease updated = repository.update(updatedLease);
 
         assertNotNull(updated);
+        assertEquals(9500.00, updated.getMonthlyRent());
         System.out.println("Updated: " + updated);
     }
 
