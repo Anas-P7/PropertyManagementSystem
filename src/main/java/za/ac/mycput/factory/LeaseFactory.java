@@ -1,3 +1,10 @@
+/*
+ * LeaseFactory.java
+ * Domain entity representing a rental property.
+ * Author : Malik Muhammed (230388175)
+ * Date   : 20 March 2026
+ */
+
 package za.ac.mycput.factory;
 
 import za.ac.mycput.domain.Lease;
